@@ -9,7 +9,8 @@
     "product",
     "causal"
   ],
-  "accent": "#2a9d8f",
+  "accent": "#c82c94",
+  "secondary_accent": "#352ca9",
   "dashboard_metrics": [
     {
       "label": "North Star",
@@ -44,5 +45,52 @@
     "The primary value proposition is: Analyze A/B tests with guardrails, segment-level reads, and fast experiment review artifacts.",
     "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
     "Typical stakeholders include analytics, operations, product, and leadership teams working on experimentation, product, causal."
+  ],
+  "app_archetype": "studio",
+  "ui_profile": {
+    "layout": "folio",
+    "surface": "paper",
+    "font_stack": "\"IBM Plex Sans\", \"Segoe UI\", sans-serif",
+    "radius": 20,
+    "shadow": 46,
+    "eyebrow_style": "soft",
+    "module_columns": 3,
+    "hero_align": "split",
+    "headline_mode": "compact"
+  },
+  "app_modules": [
+    {
+      "label": "Studio 01",
+      "title": "Opportunity Scorecard",
+      "description": "Score the current opportunity shape before deciding what to prioritize next.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Score Opportunity",
+      "prefill": "{\n  \"features\": {\n    \"current_conversion\": 0.18,\n    \"baseline_conversion\": 0.12,\n    \"volume\": 1225,\n    \"segment\": \"new_users\"\n  }\n}",
+      "hint": "Opportunity score and top factors will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Studio 02",
+      "title": "Metric Storyline",
+      "description": "Translate KPI movement into a concise summary for product, growth, or finance stakeholders.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Summarize Metrics",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 21.3,\n    \"activation\": 26.5,\n    \"retention\": 41.6,\n    \"revenue\": 60.1\n  },\n  \"baseline\": {\n    \"acquisition\": 19.6,\n    \"activation\": 24.38,\n    \"retention\": 38.27,\n    \"revenue\": 55.29\n  }\n}",
+      "hint": "Metric storyline summary will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Studio 03",
+      "title": "Decision Memo",
+      "description": "Generate the next action memo grounded in the project-specific context.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Draft Memo",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Experiment Analysis Studio.\",\n  \"features\": {\n    \"current_conversion\": 0.18,\n    \"baseline_conversion\": 0.12,\n    \"volume\": 1225,\n    \"segment\": \"new_users\"\n  },\n  \"metrics\": {\n    \"acquisition\": 21.3,\n    \"activation\": 26.5,\n    \"retention\": 41.6,\n    \"revenue\": 60.1\n  }\n}",
+      "hint": "Decision memo will appear here.",
+      "span": "normal"
+    }
   ]
 }
