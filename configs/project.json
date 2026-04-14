@@ -1,0 +1,48 @@
+{
+  "slug": "experiment-analysis-studio",
+  "title": "Experiment Analysis Studio",
+  "project_type": "analytics",
+  "domain": "Product Analytics",
+  "summary": "Analyze A/B tests with guardrails, segment-level reads, and fast experiment review artifacts.",
+  "tags": [
+    "experimentation",
+    "product",
+    "causal"
+  ],
+  "accent": "#2a9d8f",
+  "dashboard_metrics": [
+    {
+      "label": "North Star",
+      "value": "81",
+      "delta": "+7.1%"
+    },
+    {
+      "label": "Variance",
+      "value": "8%",
+      "delta": "-1.8%"
+    },
+    {
+      "label": "Decision Cycle",
+      "value": "3d",
+      "delta": "-0.5d"
+    }
+  ],
+  "sample_features": {
+    "current_conversion": 0.18,
+    "baseline_conversion": 0.12,
+    "volume": 1225,
+    "segment": "new_users"
+  },
+  "sample_metrics": {
+    "acquisition": 21.3,
+    "activation": 26.5,
+    "retention": 41.6,
+    "revenue": 60.1
+  },
+  "knowledge_base": [
+    "Experiment Analysis Studio is positioned as a Product Analytics starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Analyze A/B tests with guardrails, segment-level reads, and fast experiment review artifacts.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on experimentation, product, causal."
+  ]
+}
